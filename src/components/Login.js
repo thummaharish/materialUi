@@ -19,6 +19,7 @@ const Login = () => {
 
     useEffect(()=>{
         GetUsers()
+        alert("login with the details of email='harish@gmail.com' and password='12345' ");
     },[])
 
     const navigate = useNavigate()
@@ -33,7 +34,7 @@ const Login = () => {
 
             email: Yup.string().email('Invalid Email')
                 .required('Email Required'),
-            password: Yup.string().min(6, 'Password contains atleast 6 letters')
+            password: Yup.string().min(5, 'Password contains atleast 5 letters')
                 .max(15, 'Password should not contain more than 15 letters').required('Password Required'),
            
         }),
