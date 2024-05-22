@@ -19,7 +19,6 @@ const Login = () => {
 
     useEffect(()=>{
         GetUsers()
-        alert("login with the details of email='harish@gmail.com' and password='12345' ");
     },[])
 
     const navigate = useNavigate()
@@ -99,11 +98,17 @@ const Login = () => {
                         <button type="submit" className='btn btn-primary'>Login</button>
                     </div>
 
+                    <div className='text-center p-3'>
+
+                        <h4 className='text-success'>login with the details </h4>
+                        <p>Email : harish@gmail.com</p>
+                        <p>Password : 12345</p>
+                        
+                    </div>
+
                 </form>
 
-                    <div className='text-center p-3'>
-                            <p>login with the details of email='harish@gmail.com' and password='12345'</p>
-                    <div>          
+                            
             </div>
         </>
     )
