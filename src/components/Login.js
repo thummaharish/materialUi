@@ -11,7 +11,7 @@ const Login = () => {
 
     async function GetUsers(){
 
-        let res = await axios.get('http://localhost:7200/users');
+        let res = await axios.get('https://test-server-qs1n.onrender.com/users');
      
         setUsers(res.data)
 
@@ -23,7 +23,7 @@ const Login = () => {
 
     const navigate = useNavigate()
 
-    const { handleBlur, handleChange, handleReset, handleSubmit, values, errors, touched } = useFormik({
+    const { handleBlur, handleChange,  handleSubmit, values, errors, touched } = useFormik({
 
         initialValues: {
              email: '', password: ''

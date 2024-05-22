@@ -11,7 +11,7 @@ const Register = () => {
 
     async function GetUsers() {
 
-        let res = await axios.get('http://localhost:7200/users');
+        let res = await axios.get('https://test-server-qs1n.onrender.com/users');
         console.log(res.data)
         setUsers(res.data)
 
@@ -26,7 +26,7 @@ const Register = () => {
 
 
 
-    const { handleBlur, handleChange, handleReset, handleSubmit, values, errors, touched, setFieldValue } = useFormik({
+    const { handleBlur, handleChange,  handleSubmit, values, errors, touched, setFieldValue } = useFormik({
         initialValues: {
             name: '', email: '', password: '', mobile: '', profile: Blob
         },
@@ -59,7 +59,7 @@ const Register = () => {
             } else {
                 alert('Registration successful!');
                 
-                await axios.post('http://localhost:7200/users', values)
+                await axios.post('https://test-server-qs1n.onrender.com/users', values)
                     .then(function (response) {
                         console.log('register details =', response.data);
                     })
