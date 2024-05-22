@@ -100,6 +100,10 @@ const Login = () => {
                     </div>
 
                 </form>
+
+                    <div className='text-center p-3'>
+                            <p>login with the details of email='harish@gmail.com' and password='12345'</p>
+                    <div>          
             </div>
         </>
     )
