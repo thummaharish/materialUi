@@ -37,7 +37,7 @@ const Register = () => {
                 .required('first name required'),
             email: Yup.string().email('Invalid Email')
                 .required('Email Required'),
-            password: Yup.string().min(6, 'Password contains atleast 6 letters')
+            password: Yup.string().min(5, 'Password contains atleast 5 letters')
                 .max(15, 'Password should not contain more than 15 letters').required('Password Required'),
             mobile: Yup.string().max(10, "mobile number contain 10 digits").min(10, "mobile number contain 10 digits")
                 .required('mobile number required'),
